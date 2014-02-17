@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Bean5.github.io : " />
+
+  	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="javascripts/jquery-2.0.3.js"></script>
+  	<script type="text/javascript" src="javascripts/ga.js"></script>
+
+    <title>Ham Tools</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!-- <a id="forkme_banner" href="https://github.com/bean5">View on GitHub</a> -->
+
+          <h1 id="project_title">Ham Tools<!--  - KG7IU --></h1>
+          <h2 id="project_tagline">CQ: All Hams and Prospective Hams</h2>
+          
+          <!-- <section id="downloads">
+            <a class="zip_download_link" href="#">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="#">Download this project as a tar.gz file</a>
+          </section> -->
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p style="font-size:larger">
+          Welcome to HamTools. The purpose of this site is to furnish some free tools to the public. I want to keep this fun and exciting. Let's start with the basics. Since new sites are coming out every day, it is helpful to keep on top of them.</p>
+          <ul>
+            <li><a id="learn">Learn</a>: Because you have to start somewhere.</li>
+            <li><a id="fun">Have Fun</a>: After you are certified, have fun with your new opportunity. Take advantage of the clubs and networks. Contests, etc. are plentiful. </li>
+            <!-- <li><a id="network">Network/Communicate</a>: Want to see who has joined the game?</li> -->
+            <li><a id="volunteer">Volunteer</a>: Because paying forward is a great way to pay back.</li>
+            <li><a id="recognize">Recognize</a>: Whether it is the <a href="http://www.arrl.org/elmer-award">Elmer</a> that taught you or the new ham that made his/her <a href="http://www.arrl.org/first-contact">first contact</a>, congratulations/recognition is in order!</li>
+            <li><a id="tools">Other Great Sites</a></li>
+          </ul>
+
+        <div id="Links-Basics">
+          <h4>Sites to Know About</h4>
+          <ul>
+            <li><a class="learn" href="https://hamstudy.org/">HamStudy.org</a>: A site that helps you prepare for various ham radio certification exams. It is free, great, well supported, and very popular. I used it myself and passed the exam after using it.</li>
+            <li><a class="learn" href="http://students.cs.byu.edu/~bean5/ham-exam/">Ham Exam</a>: Another way to study for the ham radio Technician exam.</li>
+            <!-- <li><a class="learn" href="#">.org</a>: A great way to learn CW (Morse Code).</li> -->
+            <li><a class="learn" href="http://www.qsl.net/w5www/qcode.html">http://www.qsl.net/w5www/qcode.html</a>: A site that not only lists Q codes, but also contains other posts by the ham radio operator</a></li>
+            <li><a class="learn" href="qcodes.html">Q codes</a>: A great way to learn the Q codes of Ham Radio.</li>
+            <li><a class="fun network" href="http://www.echolink.org">EchoLink.org</a>: A program to install on your computer to help you communicate using a gateway (internet + ham radio).</li>
+            <li><a class="fun" href="http://www.smileyantenna.com/">www.smileyantenna.com/</a>: A fellow ham radio operator can make a great antenna for you.</li>
+            <li><a class="fun" href="http://www.arrl.org/files/file/ETP/A%20One%20Hour%20No%20Solder%20CPO%20ver%202_2.pdf">One Hour Project</a>: A One-Hour, No-Solder Code Practice Oscillator.</li>
+            <li><a class="volunteer learn" href="http://www.arrl.org/">arrl.org</a></li>
+            <li><a class="tools" href="http://www.arrl.org/first-contact">arrl.org</a>: Order a First Contact Award from ARRL.org</li>
+      		</ul>
+        </div>
+
+      </section>
+    </div>
+
+    <script>
+      $(function() {
+        hideAll();
+
+        $('#tools').on('click', function() {toggleView('.BYU')});
+        $('#volunteer').on('click', function() {toggleView('.volunteer')});
+        $('#fun').on('click', function() {toggleView('.fun')});
+        $('#tools').on('click', function() {toggleView('.tools')});
+        $('#recognize').on('click', function() {toggleView('.recognize')});
+        $('#all').on('click', function() {showAll()});
+      });
+
+      function hideAll()
+      {
+        $('#about,#like').hide();
+        $('#about ul li, #like ul li').hide();
+      }
+
+      function showAll()
+      {
+        $('#about,#like').show();
+        $('#about ul li, #like ul li').show();
+      }
+
+      function toggleView(tag)
+      {
+        hideAll();
+        $('#about,#like').show();
+        $(tag).parent().show();
+      }
+    </script>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
