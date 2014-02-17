@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app>   <!-- ng-app is a built-in Angular "directive"
+                     which defines the Angular app boundary; 
+                     in this case, from the starting <html> 
+                     tag to the closing </html> tag -->
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Bean5.github.io : " />
+
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="javascripts/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="javascripts/ga.js"></script>
+    <script src="http://tablesorter.com/__jquery.tablesorter.min.js"></script> 
+    <script src="http://code.angularjs.org/1.0.5/angular.min.js">  
+        <!-- load the angular javascript code -->
+    </script><!-- and close the script tag! -->
+    <script>
+      //set up codes/hints
+      //Sample text
+    </script>
+    <title>Ham Tools: Q Codes</title>
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!-- <a id="forkme_banner" href="https://github.com/bean5">View on GitHub</a> -->
+
+          <h1 id="project_title"><a href="index.html">Ham Tools<!--  - KG7IU --></a></h1>
+          <h2 id="project_tagline">Q: All Hams and Prospective Hams</h2>
+          
+          <!-- <section id="downloads">
+            <a class="zip_download_link" href="#">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="#">Download this project as a tar.gz file</a>
+          </section> -->
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Ham Radio Q Codes</h1>
+        <p>Some ham radio codes are as follows. Just hover over any in particular to get a sample for how it works. For more information, you can see also: <a href="http://www.qsl.net/w5www/qcode.html">http://www.qsl.net/w5www/qcode.html</a>.</p>
+        <!-- <p>
+          If you want to test your knowledge, you can use <a href="q-quiz/">Q Quiz</a>
+        </p> -->
+
+        <table id="qcodesTable" ng-Controller="ListQCodesCtrl" class="tablesorter">
+          <thead>
+            <tr>
+              <th><strong>Signal</strong></th>
+              <th><strong>Question</strong></th>
+              <th><strong>Response Example</strong></th>
+              <th><strong>Common (Yes/No)</strong></th>
+            </tr>
+          </thead>
+          <tr ng-repeat="code in qcodes">
+            <!-- <span ng-click="openCode(code.code)"> -->
+            <td><strong>{{code.code}}</strong></td>
+            <td>{{code.description}}</td>
+            <td>{{code.usage}}</td>
+            <td>{{{true:'Yes', false:'No'}[code.common]}}</td>
+          </article>
+        </table>
+
+      </section>
+    </div>
+
+    <script>
+      function ListQCodesCtrl($scope) {
+        $scope.qcodes = [
+          {code:"QRG",description:"Will you indicate my exact frequency in kilocycles?",usage:"Your frequency is ... kc.",common:false},
+          {code:"QRH",description:"Does my frequency vary?",usage:"Your frequency varies.",common:false},
+          {code:"QRI",description:"How is the tone of my transmission?",usage:"The tone of your transmission is ...\n"+
+          "1. Good.\n"+
+          "2. Variable\n"+
+          "3. Bad",common:false},
+          {code:"QRJ",description:"Are you receiving me badly?  Are my signals weak?",usage:"I cannot receive you.  Your signals are too weak.",common:false},
+          {code:"QRK",description:"What is the legibility of my signals (1 to 5)?",usage:"The legibility of your signals is ... (1 to 5).",common:false},
+          {code:"QRL ",description:"Are you busy?",usage:"I am busy (or busy with....).   Please do not interfere.",common:true},
+          {code:"QRM ",description:"Are you being interfered with?",usage:"I am being interfered with.",common:true},
+          {code:"QRN ",description:"Are you troubled by static?",usage:"I am troubled by static.",common:true},
+          {code:"QRO ",description:"Must I increase power?",usage:"Increase power.",common:true},
+          {code:"QRP ",description:"Must I decrease power?",usage:"Decrease power.",common:true},
+          {code:"QRQ ",description:"Must I send faster?",usage:"Send faster ... (words per min.).",common:true},
+          {code:"QRS ",description:"Must I send more slowly?",usage:"Transmit more slowly ... (w.p.m.).",common:true},
+          {code:"QRT ",description:"Must I stop transmission?",usage:"Stop transmission.",common:true},
+          {code:"QRU ",description:"Have you anything for me?",usage:"I have nothing for you.",common:true},
+          {code:"QRV ",description:"Are you ready?",usage:"I am ready.",common:true},
+          {code:"QRW",description:"Must I advise ... that you are calling him on ... kc?",usage:"Please advise ... that I am calling him on ... kc.",common:false},
+          {code:"QRX ",description:"When will you call again?",usage:"I will call you again at ... hours (on ... kc.).",common:true},
+          {code:"QRZ ",description:"By whom am I being called?",usage:"You are being called by ...",common:true},
+          {code:"QSA",description:"What is the strength of my signals (1 to 5)?",usage:"The strength of your signals is ... (1 to 5).",common:false},
+          {code:"QSB ",description:"Does the strength of my signals vary?",usage:"The strength of your signals varies.",common:true},
+          {code:"QSD",description:"Is my keying correct? Are my signals distinct?",usage:"Your keying is incorrect; your signals are bad.",common:false},
+          {code:"QSG",description:"Must I transmit ... telegrams (or one telegram) at a time?",usage:"Transmit ... telegrams (or one telegram) at a time.",common:false},
+          {code:"QSK ",description:"Shall I continue the transmission of all my traffic?",usage:"I can hear you between my signals.  Continue: I shall interrupt you if necessary.",common:true},
+          {code:"QSL ",description:"Can you acknowledge receipt?",usage:"I am acknowledging receipt.",common:true},
+          {code:"QSM",description:"Shall I repeat the last telegram I sent you?",usage:"Repeat the last telegram you sent me.",common:false},
+          {code:"QSO ",description:"Can you communicate with ... directly (or through...)?",usage:"I can communicate with ... direct (or through...).",common:true},
+          {code:"QSP",description:"Will you relay to ...?",usage:"I will relay to ... free of charge.",common:false},
+          {code:"QSV",description:"Shall I send a series of VVV....?",usage:"Send a series of VVV.",common:false},
+          {code:"QSX",description:"Will you listen for ... (call sign) on ... kcs?",usage:"I am listening for ... on ... kcs.",common:false},
+          {code:"QSY ",description:"Shall I change to ... kilocycles without changing the type of wave?",usage:"Change to ... kc. without changing type of wave.",common:true},
+          {code:"QSZ",description:"Shall I send each word or group twice?",usage:"Send each word or group twice.",common:false},
+          {code:"QTA",description:"Shall I cancel nr ... as if it had not been sent?",usage:"Cancel nr ... as if it had not been sent.",common:false},
+          {code:"QTB",description:"Do you agree with my word count?",usage:"I do not agree with your word count; I shall repeat the first letter of each word and the first figure of each number.",common:false},
+          {code:"QTC",description:"How many telegrams have you to send?",usage:"I have ... telegrams for you or for ....",common:false},
+          {code:"QTH ",description:"What is your position (location)?",usage:"My position (location) is ....",common:true},
+          {code:"QTR",description:"What is the exact time?",usage:"The exact time is ....",common:false},
+          {code:"QST ",description:"",usage:"General call preceeding a message address to all amateurs and A.R.R.L. Members.  This is in effect \"CQ ARRL\".",common:true},
+          {code:"QRRR",description:"",usage:"Official A.R.R.L. \"land SOS.\"  A distress call for emergency use only.",common:false}
+        ];
+      }
+
+      $(function() 
+          { 
+              $("#qcodesTable").tablesorter(); 
+          } 
+      ); 
+          
+
+    </script>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
