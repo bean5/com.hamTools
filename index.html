@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Bean5.github.io : " />
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+  	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="javascripts/jquery-2.0.3.js"></script>
+  	<script type="text/javascript" src="javascripts/ga.js"></script>
 
-    <title>HamTools by bean5</title>
+    <title>Ham Tools</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="container">
-        <h1>HamTools</h1>
-        <h2>Ham Radio Tools and Information for the Aspiring or Novice Ham Radio Operator</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <!-- <a id="forkme_banner" href="https://github.com/bean5">View on GitHub</a> -->
 
-        <section id="downloads">
-          <a href="https://github.com/bean5/hamTools/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/bean5/hamTools/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/bean5/hamTools" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+          <h1 id="project_title">Ham Tools<!--  - KG7IU --></h1>
+          <h2 id="project_tagline">CQ: All Hams and Prospective Hams</h2>
+          
+          <!-- <section id="downloads">
+            <a class="zip_download_link" href="#">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="#">Download this project as a tar.gz file</a>
+          </section> -->
 
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        </header>
+    </div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p style="font-size:larger">
+          Welcome to HamTools. The purpose of this site is to furnish some free tools to the public. I want to keep this fun and exciting. Let's start with the basics. Since new sites are coming out every day, it is helpful to keep on top of them.</p>
+          <ul>
+            <li><a id="learn">Learn</a>: Because you have to start somewhere.</li>
+            <li><a id="fun">Have Fun</a>: After you are certified, have fun with your new opportunity. Take advantage of the clubs and networks. Contests, etc. are plentiful. </li>
+            <!-- <li><a id="network">Network/Communicate</a>: Want to see who has joined the game?</li> -->
+            <li><a id="volunteer">Volunteer</a>: Because paying forward is a great way to pay back.</li>
+            <li><a id="recognize">Recognize</a>: Whether it is the <a href="http://www.arrl.org/elmer-award">Elmer</a> that taught you or the new ham that made his/her <a href="http://www.arrl.org/first-contact">first contact</a>, congratulations/recognition is in order!</li>
+            <li><a id="tools">Other Great Sites</a></li>
+          </ul>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <div id="Links-Basics">
+          <h4>Sites to Know About</h4>
+          <ul>
+            <li><a class="learn" href="https://hamstudy.org/">HamStudy.org</a>: A site that helps you prepare for various ham radio certification exams. It is free, great, well supported, and very popular. I used it myself and passed the exam after using it.</li>
+            <li><a class="learn" href="http://students.cs.byu.edu/~bean5/ham-exam/">Ham Exam</a>: Another way to study for the ham radio Technician exam.</li>
+            <!-- <li><a class="learn" href="#">.org</a>: A great way to learn CW (Morse Code).</li> -->
+            <li><a class="learn" href="http://www.qsl.net/w5www/qcode.html">http://www.qsl.net/w5www/qcode.html</a>: A site that not only lists Q codes, but also contains other posts by the ham radio operator</a></li>
+            <li><a class="learn" href="qcodes.html">Q codes</a>: A great way to learn the Q codes of Ham Radio.</li>
+            <li><a class="fun network" href="http://www.echolink.org">EchoLink.org</a>: A program to install on your computer to help you communicate using a gateway (internet + ham radio).</li>
+            <li><a class="fun" href="http://www.smileyantenna.com/">www.smileyantenna.com/</a>: A fellow ham radio operator can make a great antenna for you.</li>
+            <li><a class="fun" href="http://www.arrl.org/files/file/ETP/A%20One%20Hour%20No%20Solder%20CPO%20ver%202_2.pdf">One Hour Project</a>: A One-Hour, No-Solder Code Practice Oscillator.</li>
+            <li><a class="volunteer learn" href="http://www.arrl.org/">arrl.org</a></li>
+            <li><a class="tools" href="http://www.arrl.org/first-contact">arrl.org</a>: Order a First Contact Award from ARRL.org</li>
+      		</ul>
+        </div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
     </div>
 
-    
+    <script>
+      $(function() {
+        hideAll();
+
+        $('#tools').on('click', function() {toggleView('.BYU')});
+        $('#volunteer').on('click', function() {toggleView('.volunteer')});
+        $('#fun').on('click', function() {toggleView('.fun')});
+        $('#tools').on('click', function() {toggleView('.tools')});
+        $('#recognize').on('click', function() {toggleView('.recognize')});
+        $('#all').on('click', function() {showAll()});
+      });
+
+      function hideAll()
+      {
+        $('#about,#like').hide();
+        $('#about ul li, #like ul li').hide();
+      }
+
+      function showAll()
+      {
+        $('#about,#like').show();
+        $('#about ul li, #like ul li').show();
+      }
+
+      function toggleView(tag)
+      {
+        hideAll();
+        $('#about,#like').show();
+        $(tag).parent().show();
+      }
+    </script>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
   </body>
 </html>
