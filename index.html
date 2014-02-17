@@ -51,7 +51,7 @@
             <li><a class="learn" href="http://students.cs.byu.edu/~bean5/ham-exam/">Ham Exam</a>: Another way to study for the ham radio Technician exam.</li>
             <!-- <li><a class="learn" href="#">.org</a>: A great way to learn CW (Morse Code).</li> -->
             <li><a class="learn" href="http://www.qsl.net/w5www/qcode.html">http://www.qsl.net/w5www/qcode.html</a>: A site that not only lists Q codes, but also contains other posts by the ham radio operator</a></li>
-            <li><a class="learn" href="qcodes.html">Q codes</a>: A great way to learn the Q codes of Ham Radio.</li>
+            <!-- <li><a class="learn" href="qcodes.html">Q codes</a>: A great way to learn the Q codes of Ham Radio.</li> --><!-- TODO: Make this page legal -->
             <li><a class="fun network" href="http://www.echolink.org">EchoLink.org</a>: A program to install on your computer to help you communicate using a gateway (internet + ham radio).</li>
             <li><a class="fun" href="http://www.smileyantenna.com/">www.smileyantenna.com/</a>: A fellow ham radio operator can make a great antenna for you.</li>
             <li><a class="fun" href="http://www.arrl.org/files/file/ETP/A%20One%20Hour%20No%20Solder%20CPO%20ver%202_2.pdf">One Hour Project</a>: A One-Hour, No-Solder Code Practice Oscillator.</li>
@@ -67,30 +67,30 @@
       $(function() {
         hideAll();
 
-        $('#tools').on('click', function() {toggleView('.BYU')});
+        $('#learn').on('click', function() {toggleView('.learn')});
+        $('#tools').on('click', function() {toggleView('.tools')});
         $('#volunteer').on('click', function() {toggleView('.volunteer')});
         $('#fun').on('click', function() {toggleView('.fun')});
-        $('#tools').on('click', function() {toggleView('.tools')});
         $('#recognize').on('click', function() {toggleView('.recognize')});
         $('#all').on('click', function() {showAll()});
       });
 
       function hideAll()
       {
-        $('#about,#like').hide();
-        $('#about ul li, #like ul li').hide();
+        $('#Links-Basics').hide();
+        $('#Links-Basics ul li').hide();
       }
 
       function showAll()
       {
-        $('#about,#like').show();
-        $('#about ul li, #like ul li').show();
+        $('#Links-Basics').show();
+        $('#Links-Basics ul li').show();
       }
 
       function toggleView(tag)
       {
         hideAll();
-        $('#about,#like').show();
+        $('#Links-Basics').show();
         $(tag).parent().show();
       }
     </script>
